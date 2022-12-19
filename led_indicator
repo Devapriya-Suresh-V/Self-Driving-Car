@@ -1,0 +1,58 @@
+const int LeftSignal = 4;
+const int enableLeft = 11;
+const int RightSignal = 12;
+const int enableRight = 13;
+
+void setup() {
+	pinMode(LeftSignal, OUTPUT);
+	pinMode(RightSignal, OUTPUT);
+	pinMode(enableLeft, OUTPUT);
+	pinMode(enableRight, OUTPUT);
+
+}
+
+void leftSignal()
+{
+	digitalWrite(LeftSignal, HIGH);
+	digitalWrite(enableleft, LOW);
+	digitalWrite(RightSignal, LOW);
+	digitalWrite(enableRight, LOW);
+}
+
+void rightSignal()
+{	
+	digitalWrite(LeftSignal, LOW);
+	digitalWrite(enableleft, LOW);
+	digitalWrite(RightSignal, HIGH);
+	digitalWrite(enableRight, LOW);
+}
+
+void Brake()
+{	
+	digitalWrite(LeftSignal, HIGH);
+	digitalWrite(enableleft, HIGH);
+	digitalWrite(RightSignal, HIGH);
+	digitalWrite(enableRight, HIGH);
+}
+
+void SignalOFF()
+{	
+	digitalWrite(LeftSignal, LOW);
+	digitalWrite(enableleft, LOW);
+	digitalWrite(RightSignal, LOW);
+	digitalWrite(enableRight, LOW);
+}
+
+	
+void loop() {
+
+	digitalWrite(LeftSignal, HIGH);
+	digitalWrite(enableleft, LOW);
+	digitalWrite(RightSignal, HIGH);
+	digitalWrite(enableRight, LOW);
+}
+
+
+void loop() {
+ 	leftSignal();	
+}
